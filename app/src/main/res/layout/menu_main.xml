@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/AppTheme"
     tools:context=".MainActivity">
-    <item android:id="@+id/add_item"
+    <item
+        android:id="@+id/add_item"
         android:title="@drawable/ic_notifications"
         android:orderInCategory="100"
-        app:showAsAction="always"/>
+        app:showAsAction="always" />
 </menu>

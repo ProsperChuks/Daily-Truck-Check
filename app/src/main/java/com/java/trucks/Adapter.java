@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.appcompat.widget.AppCompatCheckBox;
 
 import java.util.ArrayList;
 
@@ -15,12 +16,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView textViewName;
-        ImageView imageViewIcon;
+        AppCompatCheckBox imageViewIcon;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             this.textViewName = (TextView) itemView.findViewById(R.id.textViewName);
-            this.imageViewIcon = (ImageView) itemView.findViewById(R.id.imageView);
+            this.imageViewIcon = (AppCompatCheckBox) itemView.findViewById(R.id.imageView);
         }
     }
 
@@ -44,10 +45,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     public void onBindViewHolder(final MyViewHolder holder, final int listPosition) {
 
         TextView textViewName = holder.textViewName;
-        ImageView imageView = holder.imageViewIcon;
+        AppCompatCheckBox imageView = holder.imageViewIcon;
 
         textViewName.setText(dataSet.get(listPosition).getName());
-        imageView.setImageResource(dataSet.get(listPosition).getImage());
     }
 
     @Override

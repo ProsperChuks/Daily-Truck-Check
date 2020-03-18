@@ -13,8 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         card_view:cardBackgroundColor="#FFFFFF"
-        card_view:cardCornerRadius="10dp"
-        card_view:cardElevation="10dp"
+        card_view:cardCornerRadius="5dp"
         card_view:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -23,32 +22,30 @@
             android:orientation="horizontal"
             >
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/imageView"
-                android:tag="image_tag"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
                 android:layout_gravity="center"
-                android:layout_weight="1"
-                android:src="@drawable/ic_truck"/>
+                android:layout_marginStart="40dp"
+                android:background="@drawable/selector"
+                android:button="@null"
+                android:tag="image_tag" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 android:layout_weight="2"
                 android:orientation="vertical"
                 >
 
                 <TextView
                     android:id="@+id/textViewName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_margin="5dp"
+                    android:layout_margin="20dp"
                     android:text="Name"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="15sp"
                     tools:ignore="HardcodedText" />
 
