@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Trucks</string>
+    <string name="available_trucks">Select one of the Available Trucks</string>
+</resources>
