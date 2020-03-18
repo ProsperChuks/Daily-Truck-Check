@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         card_view:cardBackgroundColor="#FFFFFF"
         card_view:cardCornerRadius="10dp"
-        card_view:cardElevation="5dp"
+        card_view:cardElevation="10dp"
         card_view:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -44,7 +44,7 @@
                 <TextView
                     android:id="@+id/textViewName"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
                     android:text="Name"

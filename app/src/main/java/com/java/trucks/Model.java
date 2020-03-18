@@ -1,11 +1,11 @@
 package com.java.trucks;
 
-public class DataModel {
+public class Model {
     String name;
     int id_;
     int image;
 
-    public DataModel(String name, int id_, int image) {
+    public Model(String name, int id_, int image) {
         this.name = name;
         this.id_ = id_;
         this.image=image;

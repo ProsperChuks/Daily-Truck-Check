@@ -1,6 +1,6 @@
 package com.java.trucks;
 
-public class MyData {
+public class Data {
     static String[] nameArray = {"Truck A", "Truck B", "Truck C", "Truck D"};
     static Integer[] drawableArray = {R.drawable.ic_truck, R.drawable.ic_truck,
             R.drawable.ic_truck, R.drawable.ic_truck};
