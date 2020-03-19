@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Trucks</string>
     <string name="available_trucks">Select one of the Available Trucks</string>
+    <string name="driver">Driver :</string>
+    <string name="driver_name">Bola Adebayo</string>
+    <string name="truck">Truck :</string>
+    <string name="truck_name">Sino Truck JKA-2323</string>
+    <string name="vehicle_checklist">Vehicle Checklist</string>
+    <string name="truck_check">Daily Truck Check</string>
+    <string name="interior">Interior Checks</string>
+    <string name="pass">Pass</string>
+    <string name="fail">Fail</string>
+    <string name="save_and_continue"><![CDATA[Save & Continue]]></string>
 </resources>
