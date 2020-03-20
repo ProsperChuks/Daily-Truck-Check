@@ -70,13 +70,11 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/my_recycler_view"
+                android:id="@+id/recycler_view_3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
-                android:scrollbars="vertical">
-
-            </androidx.recyclerview.widget.RecyclerView>
+                android:scrollbars="vertical" />
 
             <LinearLayout
                 android:layout_width="330dp"
@@ -85,12 +83,13 @@
                 android:layout_marginTop="40dp">
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/save_con"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#058BC5"
                     android:text="@string/save_and_continue"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:onClick="popup"/>
 
             </LinearLayout>
 

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import java.util.ArrayList;
@@ -27,12 +28,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_interior);
-        setTitle(R.string.interior);
+        setContentView(R.layout.activity_main);
 
 
-
-        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        myOnClickListener = new MyOnClickListener(this);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_1);
         recyclerView.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(this);
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private static class MyOnClickListener implements View.OnClickListener {
+    private class MyOnClickListener implements View.OnClickListener {
 
         private final Context context;
 
@@ -65,52 +65,59 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            removeItem(v);
-        }
-
-        private void removeItem(View v) {
-            int selectedItemPosition = recyclerView.getChildPosition(v);
-            RecyclerView.ViewHolder viewHolder
-                    = recyclerView.findViewHolderForPosition(selectedItemPosition);
-            TextView textViewName
-                    = (TextView) viewHolder.itemView.findViewById(R.id.textViewName);
-            String selectedName = (String) textViewName.getText();
-            int selectedItemId = -1;
-            for (int i = 0; i < Data.nameArray.length; i++) {
-                if (selectedName.equals(Data.nameArray[i])) {
-                    selectedItemId = Data.id_[i];
-                }
-            }
-            removedItems.add(selectedItemId);
-            data.remove(selectedItemPosition);
-            adapter.notifyItemRemoved(selectedItemPosition);
+            Intent sec = new Intent(MainActivity.this, InteriorActivity.class);
+            startActivity(sec);
         }
     }
 
+//        @Override
+//        public void onClick(View v) {
+//            removeItem(v);
+//        }
 
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        super.onOptionsItemSelected(item);
-        if (item.getItemId() == R.id.add_item) {
-            //check if any items to add
-            if (removedItems.size() != 0) {
-                addRemovedItemToList();
-            } else {
-                Toast.makeText(this, "Nothing to add", Toast.LENGTH_SHORT).show();
-            }
-        }
-        return true;
-    }
-
-    private void addRemovedItemToList() {
-        int addItemAtListPosition = 1;
-        data.add(addItemAtListPosition, new Model(
-                Data.nameArray[removedItems.get(0)],
-                Data.id_[removedItems.get(0)],
-                Data.drawableArray[removedItems.get(0)]
-        ));
-        adapter.notifyItemInserted(addItemAtListPosition);
-        removedItems.remove(0);
-    }
+//        private void removeItem(View v) {
+//            int selectedItemPosition = recyclerView.getChildPosition(v);
+//            RecyclerView.ViewHolder viewHolder
+//                    = recyclerView.findViewHolderForPosition(selectedItemPosition);
+//            TextView textViewName
+//                    = (TextView) viewHolder.itemView.findViewById(R.id.textViewName);
+//            String selectedName = (String) textViewName.getText();
+//            int selectedItemId = -1;
+//            for (int i = 0; i < Data.nameArray.length; i++) {
+//                if (selectedName.equals(Data.nameArray[i])) {
+//                    selectedItemId = Data.id_[i];
+//                }
+//            }
+//            removedItems.add(selectedItemId);
+//            data.remove(selectedItemPosition);
+//            adapter.notifyItemRemoved(selectedItemPosition);
+//        }
+//    }
+//
+//
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        super.onOptionsItemSelected(item);
+//        if (item.getItemId() == R.id.add_item) {
+//            //check if any items to add
+//            if (removedItems.size() != 0) {
+//                addRemovedItemToList();
+//            } else {
+//                Toast.makeText(this, "Nothing to add", Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//        return true;
+//    }
+//
+//    private void addRemovedItemToList() {
+//        int addItemAtListPosition = 1;
+//        data.add(addItemAtListPosition, new Model(
+//                Data.nameArray[removedItems.get(0)],
+//                Data.id_[removedItems.get(0)],
+//                Data.drawableArray[removedItems.get(0)]
+//        ));
+//        adapter.notifyItemInserted(addItemAtListPosition);
+//        removedItems.remove(0);
+//    }
 }

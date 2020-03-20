@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="375dp"
+    android:layout_gravity="center"
+    android:padding="5dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/comment"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/edit_text_border"
+            android:hint="@string/popup_hint"
+            android:inputType="textMultiLine"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="80dp"
+            android:ems="70"
+            android:textSize="15sp"
+            tools:ignore="LabelFor,RtlSymmetry"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:id="@+id/submit_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_border"
+            android:text="@string/save_and_continue"
+            android:textColor="#058BC5" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

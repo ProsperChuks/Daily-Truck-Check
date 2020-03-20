@@ -10,5 +10,8 @@
     <string name="interior">Interior Checks</string>
     <string name="pass">Pass</string>
     <string name="fail">Fail</string>
-    <string name="save_and_continue"><![CDATA[Save & Continue]]></string>
+    <string name="save_and_continue">Save &amp; Continue</string>
+    <string name="comment">Comment</string>
+    <string name="popup_hint">Check failed due to…</string>
+    <string name="cancel">Cancel</string>
 </resources>
