@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            Intent sec = new Intent(MainActivity.this, InteriorActivity.class);
+            Intent sec = new Intent(MainActivity.this, TruckCheckActivity.class);
             startActivity(sec);
         }
     }
