@@ -41,7 +41,7 @@ public class TruckCheckActivity extends AppCompatActivity {
                     StatusData.drawableArray2[i]
             ));
         }
-        adapter = new statusAdapter(data);
+        adapter = new StatusAdapter(data);
         recyclerView.setAdapter(adapter);
     }
 

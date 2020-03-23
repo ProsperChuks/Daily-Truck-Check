@@ -19,8 +19,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.textViewName = (TextView) itemView.findViewById(R.id.textViewName);
-            this.imageViewIcon = (AppCompatCheckBox) itemView.findViewById(R.id.imageView);
+            this.textViewName = itemView.findViewById(R.id.textViewName);
+            this.imageViewIcon = itemView.findViewById(R.id.imageView);
         }
     }
 
@@ -34,7 +34,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
                 .inflate(R.layout.card_layout, parent, false);
 
         view.setOnClickListener(MainActivity.myOnClickListener);
-
         MyViewHolder myViewHolder = new MyViewHolder(view);
         return myViewHolder;
     }

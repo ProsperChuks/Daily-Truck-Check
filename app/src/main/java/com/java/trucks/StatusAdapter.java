@@ -4,13 +4,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
-public class statusAdapter extends RecyclerView.Adapter<statusAdapter.MyViewHolder> {
+public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.MyViewHolder> {
 
     private ArrayList<StatusModel> dataSet;
 
@@ -26,7 +25,7 @@ public class statusAdapter extends RecyclerView.Adapter<statusAdapter.MyViewHold
         }
     }
 
-    public statusAdapter(ArrayList<StatusModel> data){
+    public StatusAdapter(ArrayList<StatusModel> data){
         this.dataSet = data;
     }
 
