@@ -1,12 +1,17 @@
 package com.java.trucks;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class statusAdapter extends RecyclerView.Adapter<statusAdapter.MyViewHolder> {
 
@@ -28,13 +33,13 @@ public class statusAdapter extends RecyclerView.Adapter<statusAdapter.MyViewHold
         this.dataSet = data;
     }
 
+    @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.status_card_layout, parent, false);
 
         view.setOnClickListener(TruckCheckActivity.truckOnClickListener);
-
         MyViewHolder myViewHolder = new MyViewHolder(view);
         return myViewHolder;
     }
@@ -45,6 +50,7 @@ public class statusAdapter extends RecyclerView.Adapter<statusAdapter.MyViewHold
         TextView statusTextName = holder.statusTextName;
         AppCompatCheckBox imageView = holder.imageViewIcon;
 
+        dataSet.get(Position);
         statusTextName.setText(dataSet.get(Position).getStatusName());
     }
 

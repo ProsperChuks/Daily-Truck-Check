@@ -1,5 +1,6 @@
 package com.java.trucks;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,8 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.icu.text.Transliterator;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -34,7 +38,7 @@ public class TruckCheckActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        data = new ArrayList<StatusModel>();
+        data = new ArrayList<>();
         for(int i = 0;i < StatusData.nameArray2.length; i++){
             data.add(new StatusModel(
                     StatusData.nameArray2[i],
@@ -56,8 +60,30 @@ public class TruckCheckActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            Intent thi = new Intent(TruckCheckActivity.this, InteriorActivity.class);
-            startActivity(thi);
+            int itemPosition = recyclerView.getChildLayoutPosition(v);
+            String item = data.get(itemPosition).toString();
+
+            if (data.get(0).toString().equals(item)) {
+
+                Intent interior = new Intent(TruckCheckActivity.this, InteriorActivity.class);
+                startActivity(interior);
+
+            }else if (data.get(1).toString().equals(item)) {
+
+                Intent safety = new Intent(TruckCheckActivity.this, SafetyActivity.class);
+                startActivity(safety);
+
+            }else if (data.get(2).toString().equals(item)) {
+
+                Intent exterior = new Intent(TruckCheckActivity.this, ExteriorActivity.class);
+                startActivity(exterior);
+
+            }else if (data.get(3).toString().equals(item)) {
+
+                Intent general = new Intent(TruckCheckActivity.this, ExteriorActivity.class);
+                startActivity(general);
+
+            }
         }
     }
 }

@@ -8,7 +8,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InteriorActivity"></activity>
+        <activity android:name=".GeneralActivity"></activity>
+        <activity android:name=".SafetyActivity" />
+        <activity android:name=".ExteriorActivity" />
+        <activity android:name=".InteriorActivity" />
         <activity android:name=".TruckCheckActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

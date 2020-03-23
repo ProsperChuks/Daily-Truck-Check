@@ -8,6 +8,9 @@
     <string name="vehicle_checklist">Vehicle Checklist</string>
     <string name="truck_check">Daily Truck Check</string>
     <string name="interior">Interior Checks</string>
+    <string name="exterior">Exterior Checks</string>
+    <string name="safety">Safety Checks</string>
+    <string name="general">General Needs</string>
     <string name="pass">Pass</string>
     <string name="fail">Fail</string>
     <string name="save_and_continue">Save &amp; Continue</string>
