@@ -32,10 +32,9 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.MyViewHold
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.status_card_layout, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.status_card_layout, parent, false);
 
-        view.setOnClickListener(TruckCheckActivity.truckOnClickListener);
+        view.setOnClickListener(StatusActivity.truckOnClickListener);
         MyViewHolder myViewHolder = new MyViewHolder(view);
         return myViewHolder;
     }

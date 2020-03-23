@@ -1,11 +1,11 @@
 package com.java.trucks;
 
-public class Model {
+public class MainModel {
     String name;
     int id_;
     int image;
 
-    public Model(String name, int id_, int image) {
+    public MainModel(String name, int id_, int image) {
         this.name = name;
         this.id_ = id_;
         this.image=image;

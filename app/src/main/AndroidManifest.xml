@@ -12,7 +12,7 @@
         <activity android:name=".SafetyActivity" />
         <activity android:name=".ExteriorActivity" />
         <activity android:name=".InteriorActivity" />
-        <activity android:name=".TruckCheckActivity" />
+        <activity android:name=".StatusActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

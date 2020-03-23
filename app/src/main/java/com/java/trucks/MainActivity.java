@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private static RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private static RecyclerView recyclerView;
-    private static ArrayList<Model> data;
+    private static ArrayList<MainModel> data;
     static View.OnClickListener myOnClickListener;
     AppCompatCheckBox check;
 
@@ -34,15 +34,15 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         check = findViewById(R.id.imageView);
 
-        data = new ArrayList<Model>();
-        for (int i = 0; i < Data.nameArray.length; i++) {
-            data.add(new Model(
-                    Data.nameArray[i],
-                    Data.id_[i],
-                    Data.drawableArray[i]
+        data = new ArrayList<MainModel>();
+        for (int i = 0; i < MainData.nameArray.length; i++) {
+            data.add(new MainModel(
+                    MainData.nameArray[i],
+                    MainData.id_[i],
+                    MainData.drawableArray[i]
             ));
         }
-        adapter = new Adapter(data);
+        adapter = new MainAdapter(data);
         recyclerView.setAdapter(adapter);
     }
 
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
-            Intent checkActivity = new Intent(MainActivity.this, TruckCheckActivity.class);
+            Intent checkActivity = new Intent(MainActivity.this, StatusActivity.class);
             startActivity(checkActivity);
 
         }

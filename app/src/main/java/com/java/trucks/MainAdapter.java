@@ -8,9 +8,9 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import java.util.ArrayList;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
+public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> {
 
-    private ArrayList<Model> dataSet;
+    private ArrayList<MainModel> dataSet;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
@@ -24,7 +24,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         }
     }
 
-    public Adapter(ArrayList<Model> data) {
+    public MainAdapter(ArrayList<MainModel> data) {
         this.dataSet = data;
     }
 

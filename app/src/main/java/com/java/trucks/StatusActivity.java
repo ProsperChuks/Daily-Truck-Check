@@ -11,7 +11,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-public class TruckCheckActivity extends AppCompatActivity {
+public class StatusActivity extends AppCompatActivity {
 
     private static RecyclerView.Adapter adapter;
     private static RecyclerView recyclerView;
@@ -60,22 +60,22 @@ public class TruckCheckActivity extends AppCompatActivity {
 
             if (data.get(0).toString().equals(item)) {
 
-                Intent interior = new Intent(TruckCheckActivity.this, InteriorActivity.class);
+                Intent interior = new Intent(StatusActivity.this, InteriorActivity.class);
                 startActivity(interior);
 
             }else if (data.get(1).toString().equals(item)) {
 
-                Intent safety = new Intent(TruckCheckActivity.this, SafetyActivity.class);
+                Intent safety = new Intent(StatusActivity.this, SafetyActivity.class);
                 startActivity(safety);
 
             }else if (data.get(2).toString().equals(item)) {
 
-                Intent exterior = new Intent(TruckCheckActivity.this, ExteriorActivity.class);
+                Intent exterior = new Intent(StatusActivity.this, ExteriorActivity.class);
                 startActivity(exterior);
 
             }else if (data.get(3).toString().equals(item)) {
 
-                Intent general = new Intent(TruckCheckActivity.this, GeneralActivity.class);
+                Intent general = new Intent(StatusActivity.this, GeneralActivity.class);
                 startActivity(general);
 
             }
